@@ -36,7 +36,6 @@ Dim vrtSelectedItem As Variant
         End If
     End With
 
-    'Set the object variable to Nothing.
     Set fd = Nothing
           
     'Run the delete query that clears down the table
@@ -66,7 +65,7 @@ ClearAndLoadFile_Exit:
 
 ClearAndLoadFile_Err:
     ClearAndLoadFile = Err.Number
-    SlamMSG Error$
+    SlamMSG (Error$)
 End Function
 
 Sub ClearLoad_CtxUser()
